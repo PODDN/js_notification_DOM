@@ -17,13 +17,14 @@ const pushNotification = (posTop, posRight, title, description, type) => {
   p.textContent = description;
   div.append(p);
 
+  div.style.position = 'fixed'
   div.style.top = posTop + 'px';
   div.style.right = posRight + 'px';
 
   document.body.append(div);
 
   setTimeout(() => {
-    div.remove();
+    div.style.display = 'none';
   }, 2000);
 };
 
